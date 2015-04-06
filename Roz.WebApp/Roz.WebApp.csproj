@@ -221,6 +221,12 @@
     <Compile Include="Migrations\Books\ConfigurationBooks.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BooksDbContext.cs" />
+    <Compile Include="Models\CustomRole.cs" />
+    <Compile Include="Models\CustomRoleStore.cs" />
+    <Compile Include="Models\CustomUserClaim.cs" />
+    <Compile Include="Models\CustomUserLogin.cs" />
+    <Compile Include="Models\CustomUserRole.cs" />
+    <Compile Include="Models\CustomUserStore.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="ViewModels\AddPhoneNumberViewModel.cs" />

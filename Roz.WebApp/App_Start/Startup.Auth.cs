@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using Roz.Data.EntityFramework;
+using Roz.Identity;
 using Roz.WebApp.Models;
 using Roz.WebApp.Services;
 
@@ -32,7 +33,7 @@ namespace Roz.WebApp
                 Provider = new CookieAuthenticationProvider
                 {
                     OnValidateIdentity = SecurityStampValidator
-                        .OnValidateIdentity<ApplicationUserManager, ApplicationUser, long>(
+                        .OnValidateIdentity<ApplicationUserManager, User, long>(
                             validateInterval: TimeSpan.FromMinutes(30),
                             regenerateIdentityCallback: (manager, user) =>
                                 user.GenerateUserIdentityAsync(manager),

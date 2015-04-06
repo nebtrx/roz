@@ -53,6 +53,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{0897F94B-97F7-
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Roz.Database", "Roz.Database\Roz.Database.sqlproj", "{E563C598-B321-40CF-9DEE-76F0A8BAA22E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{CE5B6106-1FB8-473A-9801-9616C6434750}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roz.Identity.EntityFramework", "Roz.Identity.EntityFramework\Roz.Identity.EntityFramework.csproj", "{56851237-D076-4797-8C0A-4EA9270CBD82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +133,10 @@ Global
 		{E563C598-B321-40CF-9DEE-76F0A8BAA22E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E563C598-B321-40CF-9DEE-76F0A8BAA22E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E563C598-B321-40CF-9DEE-76F0A8BAA22E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{56851237-D076-4797-8C0A-4EA9270CBD82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56851237-D076-4797-8C0A-4EA9270CBD82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56851237-D076-4797-8C0A-4EA9270CBD82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56851237-D076-4797-8C0A-4EA9270CBD82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,5 +159,6 @@ Global
 		{8A82E3BD-10DE-4217-A659-426B041042C4} = {B1636087-61F6-42ED-93A4-7AB7F9E6D513}
 		{86791DB2-653A-4E33-A7A7-7F69EFAFB63A} = {B1636087-61F6-42ED-93A4-7AB7F9E6D513}
 		{E563C598-B321-40CF-9DEE-76F0A8BAA22E} = {0897F94B-97F7-49D4-AF93-AE2E814AE028}
+		{56851237-D076-4797-8C0A-4EA9270CBD82} = {CE5B6106-1FB8-473A-9801-9616C6434750}
 	EndGlobalSection
 EndGlobal

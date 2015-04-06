@@ -221,16 +221,9 @@
     <Compile Include="Migrations\Books\ConfigurationBooks.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BooksDbContext.cs" />
-    <Compile Include="Models\CustomRole.cs" />
-    <Compile Include="Models\CustomRoleStore.cs" />
-    <Compile Include="Models\CustomUserClaim.cs" />
-    <Compile Include="Models\CustomUserLogin.cs" />
-    <Compile Include="Models\CustomUserRole.cs" />
-    <Compile Include="Models\CustomUserStore.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="ViewModels\AddPhoneNumberViewModel.cs" />
-    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="ViewModels\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\ExternalLoginListViewModel.cs" />
@@ -354,6 +347,10 @@
     <ProjectReference Include="..\Roz.I18N\Roz.I18N.csproj">
       <Project>{D31683BD-B01F-447F-B249-6CA85C11F8A8}</Project>
       <Name>Roz.I18N</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Roz.Identity.EntityFramework\Roz.Identity.EntityFramework.csproj">
+      <Project>{56851237-D076-4797-8C0A-4EA9270CBD82}</Project>
+      <Name>Roz.Identity.EntityFramework</Name>
     </ProjectReference>
     <ProjectReference Include="..\Roz.Infrastructure.Web\Roz.Infrastructure.Web.csproj">
       <Project>{0261A8EC-FB90-41F1-A262-BC1ABDB6D437}</Project>

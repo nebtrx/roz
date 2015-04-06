@@ -49,6 +49,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roz.Mapping.Automapper", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roz.Mapping.Automapper.Ninject", "Roz.Mapping.Automapper.Ninject\Roz.Mapping.Automapper.Ninject.csproj", "{86791DB2-653A-4E33-A7A7-7F69EFAFB63A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{0897F94B-97F7-49D4-AF93-AE2E814AE028}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Roz.Database", "Roz.Database\Roz.Database.sqlproj", "{E563C598-B321-40CF-9DEE-76F0A8BAA22E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -119,6 +123,12 @@ Global
 		{86791DB2-653A-4E33-A7A7-7F69EFAFB63A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86791DB2-653A-4E33-A7A7-7F69EFAFB63A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86791DB2-653A-4E33-A7A7-7F69EFAFB63A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E563C598-B321-40CF-9DEE-76F0A8BAA22E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E563C598-B321-40CF-9DEE-76F0A8BAA22E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E563C598-B321-40CF-9DEE-76F0A8BAA22E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E563C598-B321-40CF-9DEE-76F0A8BAA22E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E563C598-B321-40CF-9DEE-76F0A8BAA22E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E563C598-B321-40CF-9DEE-76F0A8BAA22E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -140,5 +150,6 @@ Global
 		{6F9DFB50-EDF3-4B47-9ED3-ED028B1A4B72} = {B42065DF-B912-4CD0-90C5-BC17072CCEA8}
 		{8A82E3BD-10DE-4217-A659-426B041042C4} = {B1636087-61F6-42ED-93A4-7AB7F9E6D513}
 		{86791DB2-653A-4E33-A7A7-7F69EFAFB63A} = {B1636087-61F6-42ED-93A4-7AB7F9E6D513}
+		{E563C598-B321-40CF-9DEE-76F0A8BAA22E} = {0897F94B-97F7-49D4-AF93-AE2E814AE028}
 	EndGlobalSection
 EndGlobal

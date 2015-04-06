@@ -11,3 +11,5 @@ glob:obj
 glob:bin
 glob:Bin
 glob:_ReSharper.Gossip/
+*.mdf
+*.ldf

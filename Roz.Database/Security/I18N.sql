@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [I18N]
+    AUTHORIZATION [dbo];
+

@@ -3,13 +3,14 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
+using Roz.Identity;
 using Roz.WebApp.Models;
 
 namespace Roz.WebApp.Services
 {
-    public class ApplicationUserManager : UserManager<ApplicationUser, long>
+    public class ApplicationUserManager : UserManager<User, long>
     {
-        public ApplicationUserManager(IUserStore<ApplicationUser, long> store)
+        public ApplicationUserManager(IUserStore<User, long> store)
             : base(store)
         {
         }
@@ -18,9 +19,9 @@ namespace Roz.WebApp.Services
             IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context)
         {
             var manager = new ApplicationUserManager(
-                new CustomUserStore(context.Get<ApplicationDbContext>()));
+                new UserStore(context.Get<ApplicationDbContext>()));
             // Configure validation logic for usernames 
-            manager.UserValidator = new UserValidator<ApplicationUser, long>(manager)
+            manager.UserValidator = new UserValidator<User, long>(manager)
             {
                 AllowOnlyAlphanumericUserNames = false,
                 RequireUniqueEmail = true
@@ -38,12 +39,12 @@ namespace Roz.WebApp.Services
             // and Emails as a step of receiving a code for verifying the user 
             // You can write your own provider and plug in here. 
             manager.RegisterTwoFactorProvider("PhoneCode",
-                new PhoneNumberTokenProvider<ApplicationUser, long>
+                new PhoneNumberTokenProvider<User, long>
                 {
                     MessageFormat = "Your security code is: {0}"
                 });
             manager.RegisterTwoFactorProvider("EmailCode",
-                new EmailTokenProvider<ApplicationUser, long>
+                new EmailTokenProvider<User, long>
                 {
                     Subject = "Security Code",
                     BodyFormat = "Your security code is: {0}"
@@ -54,7 +55,7 @@ namespace Roz.WebApp.Services
             if (dataProtectionProvider != null)
             {
                 manager.UserTokenProvider =
-                    new DataProtectorTokenProvider<ApplicationUser, long>(
+                    new DataProtectorTokenProvider<User, long>(
                         dataProtectionProvider.Create("ASP.NET Identity"));
             }
             return manager;

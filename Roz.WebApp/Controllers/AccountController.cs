@@ -31,7 +31,7 @@ namespace Roz.WebApp.Controllers
 
         public ApplicationUserManager UserManager
         {
-            get { return _userManager; //?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            get { return _userManager?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
             }
             private set
             {
@@ -178,16 +178,16 @@ namespace Roz.WebApp.Controllers
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
-        public async Task<ActionResult> ConfirmEmail(string userId, string code)
+        public async Task<ActionResult> ConfirmEmail(long userId, string code)
         {
-            if (userId == null || code == null)
+            if (userId == default(long) || code == null)
             {
                 return View("Error");
             }
             var result = await UserManager.ConfirmEmailAsync(userId, code);
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
         }
-
+        
         //
         // GET: /Account/ForgotPassword
         [AllowAnonymous]

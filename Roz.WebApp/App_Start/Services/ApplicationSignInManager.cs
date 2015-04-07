@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Roz.Identity;
+using Roz.Identity.EntityFramework;
 using Roz.WebApp.Models;
 
 namespace Roz.WebApp.Services

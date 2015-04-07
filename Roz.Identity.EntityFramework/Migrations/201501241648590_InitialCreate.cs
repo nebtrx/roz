@@ -1,6 +1,6 @@
 using System.Data.Entity.Migrations;
 
-namespace Roz.WebApp.Migrations.Application
+namespace Roz.Identity.EntityFramework.Migrations
 {
     public partial class InitialCreate : DbMigration
     {

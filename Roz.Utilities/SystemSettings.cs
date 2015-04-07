@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Roz.Web.Settings
+namespace Roz.Utilities
 {
     public class SystemSettings
     {

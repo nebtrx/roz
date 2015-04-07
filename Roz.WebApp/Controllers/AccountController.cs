@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Roz.Identity;
+using Roz.Identity.EntityFramework;
 using Roz.WebApp.Models;
 using Roz.WebApp.Services;
 using Roz.WebApp.ViewModels;

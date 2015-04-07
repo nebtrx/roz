@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Roz.Identity.EntityFramework;
 
 namespace Roz.Core.Entities
 {
@@ -26,7 +27,7 @@ namespace Roz.Core.Entities
         /// </summary>
         public EventCategory Category { get; set; }
 
-        public ICollection<Venue> Venues { get; set; }
+        public ICollection<Venue> AvailableVenues { get; set; }
 
         /// <summary>
         /// Indicates if the event has a general allocation plan or a seating plan
@@ -34,5 +35,7 @@ namespace Roz.Core.Entities
         public AllocationType AllocationType { get; set; }
 
         public ICollection<Booking> Bookings { get; set; }
+
+        public User Owner { get; set; }
     }
 }

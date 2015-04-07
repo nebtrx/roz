@@ -6,9 +6,11 @@ namespace Roz.Core.Entities
     {
         public Guid Guid { get; set; }
 
-        public ReservationOrder ReservationOrder { get; set; }
+        public TicketBooking TicketBooking { get; set; }
 
         public EventAppointment Appointment { get; set; }
+
+        public CustomerDetails AttendeeDetails { get; set; }
 
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Roz.Core.Entities
+﻿namespace Roz.Data.Model.Entities
 {
     public enum DiscountType
     {

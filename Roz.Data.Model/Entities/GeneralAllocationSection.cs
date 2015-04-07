@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Roz.Core.Entities
+﻿namespace Roz.Data.Model.Entities
 {
     class GeneralAllocationSection : AllocationSection
     {

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roz.Core", "Roz.Core\Roz.Core.csproj", "{8ADC49C7-9435-4515-BE45-A3A9BADD1438}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roz.I18N", "Roz.I18N\Roz.I18N.csproj", "{D31683BD-B01F-447F-B249-6CA85C11F8A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roz.Infrastructure", "Roz.Infrastructure\Roz.Infrastructure.csproj", "{7E3658AB-49AD-4884-8D1A-0848EE41D1CD}"
@@ -57,16 +55,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{CE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roz.Identity.EntityFramework", "Roz.Identity.EntityFramework\Roz.Identity.EntityFramework.csproj", "{56851237-D076-4797-8C0A-4EA9270CBD82}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{FA1D6E73-4BB5-4FF5-9637-7D892C451648}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roz.Data.Model", "Roz.Data.Model\Roz.Data.Model.csproj", "{8ADC49C7-9435-4515-BE45-A3A9BADD1438}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8ADC49C7-9435-4515-BE45-A3A9BADD1438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8ADC49C7-9435-4515-BE45-A3A9BADD1438}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8ADC49C7-9435-4515-BE45-A3A9BADD1438}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8ADC49C7-9435-4515-BE45-A3A9BADD1438}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D31683BD-B01F-447F-B249-6CA85C11F8A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D31683BD-B01F-447F-B249-6CA85C11F8A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D31683BD-B01F-447F-B249-6CA85C11F8A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -137,6 +135,10 @@ Global
 		{56851237-D076-4797-8C0A-4EA9270CBD82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56851237-D076-4797-8C0A-4EA9270CBD82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56851237-D076-4797-8C0A-4EA9270CBD82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ADC49C7-9435-4515-BE45-A3A9BADD1438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ADC49C7-9435-4515-BE45-A3A9BADD1438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ADC49C7-9435-4515-BE45-A3A9BADD1438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ADC49C7-9435-4515-BE45-A3A9BADD1438}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,5 +162,6 @@ Global
 		{86791DB2-653A-4E33-A7A7-7F69EFAFB63A} = {B1636087-61F6-42ED-93A4-7AB7F9E6D513}
 		{E563C598-B321-40CF-9DEE-76F0A8BAA22E} = {0897F94B-97F7-49D4-AF93-AE2E814AE028}
 		{56851237-D076-4797-8C0A-4EA9270CBD82} = {CE5B6106-1FB8-473A-9801-9616C6434750}
+		{8ADC49C7-9435-4515-BE45-A3A9BADD1438} = {FA1D6E73-4BB5-4FF5-9637-7D892C451648}
 	EndGlobalSection
 EndGlobal

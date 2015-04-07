@@ -1,4 +1,4 @@
-﻿namespace Roz.Core.Services
+﻿namespace Roz.Data.Model.Services
 {
     class VATAsignmentServices
     {

@@ -4,6 +4,9 @@ using System.Data.Entity;
 using System.Linq;
 using Roz.Data;
 using Roz.Data.EntityFramework;
+using Roz.Identity;
+using Roz.Identity.EntityFramework;
+using Roz.Identity.EntityFramework.Migrations;
 using Roz.WebApp;
 using Roz.WebApp.Migrations.Application;
 using Roz.WebApp.Migrations.Books;
@@ -20,7 +23,7 @@ namespace Roz.WebApp
 
 
             ((IEFDataEngine)DataEngine.GetEngine(typeof(EFDataEngine).FullName)).RegisterInitializer(
-                new MigrateDatabaseToLatestVersion<ApplicationDbContext, ConfigurationApplication>());
+                new MigrateDatabaseToLatestVersion<IdentityDbContext, Configuration>());
 
             ((IEFDataEngine)DataEngine.GetEngine(typeof(EFDataEngine).FullName)).RegisterInitializer(
                 new MigrateDatabaseToLatestVersion<BooksDbContext, ConfigurationBooks>());

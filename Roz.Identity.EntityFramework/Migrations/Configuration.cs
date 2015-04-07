@@ -1,16 +1,16 @@
 using System.Data.Entity.Migrations;
 
-namespace Roz.WebApp.Migrations.Application
+namespace Roz.Identity.EntityFramework.Migrations
 {
-    internal sealed class ConfigurationApplication : DbMigrationsConfiguration<Roz.WebApp.Models.ApplicationDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<IdentityDbContext>
     {
-        public ConfigurationApplication()
+        public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "Roz.WebApp.Models.ApplicationDbContext";
+            ContextKey = "Roz.WebApp.Models.IdentityDbContext";
         }
 
-        protected override void Seed(Roz.WebApp.Models.ApplicationDbContext context)
+        protected override void Seed(IdentityDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

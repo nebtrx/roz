@@ -5,14 +5,14 @@ namespace Roz.I18N.EntityFramework.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Roz.I18N.EntityFramework.Entities.I18NDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<I18NDbContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(Roz.I18N.EntityFramework.Entities.I18NDbContext context)
+        protected override void Seed(I18NDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

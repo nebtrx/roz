@@ -15,7 +15,7 @@ namespace Roz.Core.Entities
 
         public Venue Venue { get; set; }
 
-        public ICollection<ReservationOrder> ReservationOrders { get; set; }
+        public ICollection<TicketBooking> TicketBookings { get; set; }
 
         public ICollection<PriceCategory> AvailablePriceCategories { get; set; }
 

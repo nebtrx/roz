@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Roz.Core.Entities
 {
-    public class ReservationOrder
+    public class TicketBooking
     {
         public int Quantity { get; set; }
 
@@ -14,6 +14,8 @@ namespace Roz.Core.Entities
         public EventAppointment Appointment { get; set; }
 
         public Booking Booking { get; set; }
+
+        public ICollection<CustomerDetails> AttendeesDetails { get; set; }
 
         public ICollection<Ticket> BookedTickets { get; set; }
     }

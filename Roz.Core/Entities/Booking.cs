@@ -17,7 +17,9 @@ namespace Roz.Core.Entities
 
         public DateTime ReservationTime { get; set; }
 
-        public ICollection<ReservationOrder> ReservationsOrders { get; set; }
+        public CustomerDetails BookerDetails { get; set; }
+
+        public ICollection<TicketBooking> ReservationsOrders { get; set; }
 
         public IEnumerable<Ticket> BookedTickets
         {

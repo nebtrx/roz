@@ -1,4 +1,4 @@
-﻿namespace Roz.Core.Other
+﻿namespace Roz.Data.Model.Other
 {
     public class FlatFee : Fee
     {

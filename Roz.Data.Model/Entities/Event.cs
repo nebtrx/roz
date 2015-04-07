@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Roz.Identity.EntityFramework;
 
-namespace Roz.Core.Entities
+namespace Roz.Data.Model.Entities
 {
     public class Event
     {

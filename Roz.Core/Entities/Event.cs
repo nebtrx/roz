@@ -5,8 +5,6 @@ namespace Roz.Core.Entities
 {
     public class Event
     {
-        public long Id { get; set; }
-
         public Guid Guid { get; set; }
 
         public string Name { get; set; }
@@ -17,25 +15,24 @@ namespace Roz.Core.Entities
 
         public bool IsActive { get; set; }
 
-        public decimal? FeeRate { get; set; }
-
+        /// <summary>
+        /// IVA percent
+        /// </summary>
         public decimal VATRate { get; set; }
 
+
+        /// <summary>
+        /// Descuento si registrado
+        /// </summary>
         public EventCategory Category { get; set; }
 
-        public decimal? DiscountIfAffiliate { get; set; }
+        public ICollection<Venue> Venues { get; set; }
 
-        public Venue Venue { get; set; }
-
-        public List<EventDate> Dates  { get; set; }
-
+        /// <summary>
+        /// Indicates if the event has a general allocation plan or a seating plan
+        /// </summary>
         public AllocationType AllocationType { get; set; }
 
-        public List<AllocationSection> AllocationSections { get; set; }
-
-        public List<PriceCategory> PriceCategories { get; set; }
-
-        public List<Discount> Discounts { get; set; }
-
+        public ICollection<Booking> Bookings { get; set; }
     }
 }

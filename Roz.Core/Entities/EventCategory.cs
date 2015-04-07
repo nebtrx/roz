@@ -10,6 +10,9 @@
         Music,
         Theather,
         Tour,
+        Conference,
+        Weeding,
+        FundRaising,
         Other,
     }
 }

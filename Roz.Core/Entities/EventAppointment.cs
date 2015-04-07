@@ -2,7 +2,7 @@
 
 namespace Roz.Core.Entities
 {
-    public class EventDate
+    public class EventAppointment
     {
         public Guid Guid { get; set; }
 

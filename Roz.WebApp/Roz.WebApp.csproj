@@ -213,18 +213,12 @@
     <Compile Include="Migrations\Books\201501242120290_InitialCreate.Designer.cs">
       <DependentUpon>201501242120290_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Application\201501241648590_InitialCreate.cs" />
-    <Compile Include="Migrations\Application\201501241648590_InitialCreate.Designer.cs">
-      <DependentUpon>201501241648590_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Application\ConfigurationApplication.cs" />
     <Compile Include="Migrations\Books\ConfigurationBooks.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BooksDbContext.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="ViewModels\AddPhoneNumberViewModel.cs" />
-    <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="ViewModels\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\ExternalLoginListViewModel.cs" />
     <Compile Include="ViewModels\FactorViewModel.cs" />
@@ -367,9 +361,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\Books\201501242120290_InitialCreate.resx">
       <DependentUpon>201501242120290_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\Application\201501241648590_InitialCreate.resx">
-      <DependentUpon>201501241648590_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
+using Roz.I18N.EntityFramework.Entities;
 
-namespace Roz.I18N.EntityFramework.Entities
+namespace Roz.I18N.EntityFramework
 {
     public class I18NDbContext : DbContext
     {

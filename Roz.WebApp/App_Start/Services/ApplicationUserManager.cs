@@ -4,7 +4,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Roz.Identity;
+using Roz.Identity.EntityFramework;
 using Roz.WebApp.Models;
+using IdentityDbContext = Roz.Identity.EntityFramework.IdentityDbContext;
 
 namespace Roz.WebApp.Services
 {
@@ -19,7 +21,7 @@ namespace Roz.WebApp.Services
             IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context)
         {
             var manager = new ApplicationUserManager(
-                new UserStore(context.Get<ApplicationDbContext>()));
+                new UserStore(context.Get<IdentityDbContext>()));
             // Configure validation logic for usernames 
             manager.UserValidator = new UserValidator<User, long>(manager)
             {

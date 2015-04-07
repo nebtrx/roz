@@ -1,7 +1,12 @@
-﻿namespace Roz.Core.Entities
+﻿using System;
+using System.Collections.Generic;
+
+namespace Roz.Core.Entities
 {
     public class Venue
     {
+        public Guid Guid { get; set; }
+
         public long Id { get; set; }
 
         public string Name { get; set; }
@@ -29,5 +34,11 @@
         public string Email { get; set; }
 
         public string Phone { get; set; }
+
+        public Event Event { get; set; }
+
+        public ICollection<AllocationSection> AvailableAllocationSections { get; set; }
+
+        public ICollection<EventAppointment> AvailableAppointments { get; set; }
     }
 }

@@ -1,5 +1,7 @@
-﻿namespace Roz.Core.Entities
+﻿namespace Roz.Core.Other
 {
+    // TODO: implement using MEF
+
     /// <summary>
     /// Start date
     /// EnDate
@@ -7,8 +9,7 @@
     /// definir class condition
     /// 
     /// </summary>
-
-    public class Discount
+    public abstract class Discount
     {
          
     }
@@ -18,18 +19,19 @@
 
     }
 
+    /// <summary>
+    /// Lets see later
+    /// </summary>
     public class ProgresiveFeeDiscount : Discount
     {
 
     }
 
 
-    public class ItemsDiscount : Discount
-    {
-
-    }
-
-    public class SecondHalfPriceDiscount : Discount
+    /// <summary>
+    /// Second have price, Pay for 10 take 11
+    /// </summary>
+    public class ItemsPriceDiscount : Discount
     {
 
     }

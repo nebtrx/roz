@@ -1,16 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Roz.Core.Entities
 {
-    class Booking
+    public class Booking
     {
-        public AllocationSection AllocationSection { get; set; }
+        public Guid Guid { get; set; }
 
-        public long Id { get; set; }
+        public FeeType FeeType { get; set; }
+
+        public Venue Venue { get; set; }
+
+        public Event Event { get; set; }
 
         public bool IsConfirmed { get; set; }
 
         public DateTime ReservationTime { get; set; }
 
+        public ICollection<ReservationOrder> ReservationsOrders { get; set; }
+
+        public IEnumerable<Ticket> BookedTickets
+        {
+            get { throw new NotImplementedException(); }
+        }
     }
 }

@@ -5,7 +5,6 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Roz.I18N.Providers;
 using Roz.Utilities;
-using Roz.Web.Settings;
 
 namespace Roz.I18N.Utilities
 {

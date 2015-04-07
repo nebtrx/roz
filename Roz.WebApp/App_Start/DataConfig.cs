@@ -8,7 +8,6 @@ using Roz.Identity;
 using Roz.Identity.EntityFramework;
 using Roz.Identity.EntityFramework.Migrations;
 using Roz.WebApp;
-using Roz.WebApp.Migrations.Application;
 using Roz.WebApp.Migrations.Books;
 using Roz.WebApp.Models;
 

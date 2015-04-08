@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\AllocationSeat.cs" />
     <Compile Include="Entities\AllocationSection.cs" />
     <Compile Include="Entities\AllocationType.cs" />
     <Compile Include="Entities\CustomerDetails.cs" />

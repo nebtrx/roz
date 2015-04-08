@@ -6,9 +6,9 @@ namespace Roz.Data.Model.Entities
     {
         public Guid Guid { get; set; }
 
-        public TicketBooking TicketBooking { get; set; }
+        public AllocationSeat AllocationSeat { get; set; }
 
-        public EventAppointment Appointment { get; set; }
+        public TicketBooking TicketBooking { get; set; }
 
         public CustomerDetails AttendeeDetails { get; set; }
 

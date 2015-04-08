@@ -35,6 +35,8 @@ namespace Roz.Data.Model.Entities
 
         public string Phone { get; set; }
 
+        public string GraphicRepresentation { get; set; }
+
         public Event Event { get; set; }
 
         public ICollection<AllocationSection> AvailableAllocationSections { get; set; }

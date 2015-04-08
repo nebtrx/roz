@@ -9,7 +9,9 @@ namespace Roz.Data.Model.Entities
 
         public string Description { get; set; }
 
-        public long TicketsAllocated { get; set; }
+        public string GraphicRepresentation { get; set; }
+
+        public long SeatsAllocated { get; set; }
 
         public DiscountType Discount { get; set; }
 
@@ -19,7 +21,9 @@ namespace Roz.Data.Model.Entities
 
         public ICollection<PriceCategory> AvailablePriceCategories { get; set; }
 
-        public IEnumerable<Ticket> BookedTickets
+        public ICollection<AllocationSeat> Seats { get; set; }
+
+        public IEnumerable<Ticket> Tickets
         {
             get { throw new NotImplementedException(); }
         }

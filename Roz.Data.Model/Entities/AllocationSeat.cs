@@ -10,13 +10,13 @@ namespace Roz.Data.Model.Entities
 
         public string Seat { get; set; }
 
-        public bool IsReserved { get; set; }
-
-        public bool IsConfirmed { get; set; }
+        public SeatState State { get; set; }
 
         public bool IsWheelchairSpace { get; set; }
 
         public bool IsHouseReserved { get; set; }
+
+        public bool IsAvailable { get; set; }
 
         public string Comment { get; set; }
 

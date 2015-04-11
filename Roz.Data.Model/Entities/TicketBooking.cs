@@ -1,21 +1,35 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using Roz.Utilities;
 
 namespace Roz.Data.Model.Entities
 {
-    public class TicketBooking
+    [Table("TicketBooking", Schema = "Domain")]
+    public class TicketBooking:EntityConcurrentlyUnsafe
     {
-        public int Quantity { get; set; }
+        [ForeignKey("Seat")]
+        public long SeatId { get; set; }
+        public Seat Seat { get; set; }
 
-        public AllocationSection AllocationSection { get; set; }
-
-        public PriceCategory PriceCategory { get; set; }
-
+        [ForeignKey("Appointment")]
+        public long AppointmentId { get; set; }
         public EventAppointment Appointment { get; set; }
 
+        [ForeignKey("Booking")]
+        public long BookingId { get; set; }
         public Booking Booking { get; set; }
 
-        public ICollection<CustomerDetails> AttendeesDetails { get; set; }
 
-        public ICollection<Ticket> BookedTickets { get; set; }
+        [ForeignKey("AttendeeDetails")]
+        public long? AttendeeDetailsId { get; set; }
+        public CustomerDetails AttendeeDetails { get; set; }
+
+
+        [NotMappedAttribute]
+        public Ticket Ticket
+        {
+            get { return Seat.NotNull().Tickets.FirstOrDefault(ticket => ticket.TicketBookingId == Id); }
+        }
     }
 }

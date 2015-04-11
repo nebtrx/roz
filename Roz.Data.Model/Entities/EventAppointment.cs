@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Roz.Data.Model.Entities
 {
-    public class EventAppointment
+    [Table("EventAppointment", Schema = "Domain")]
+    public class EventAppointment:EntityConcurrentlyUnsafe
     {
-        public Guid Guid { get; set; }
 
-        public Event Event { get; set; }
+        [ForeignKey("Venue")]
+        public long VenueId { get; set; }
+
+        public Venue Venue { get; set; }
 
         public DateTime Date { get; set; }
 

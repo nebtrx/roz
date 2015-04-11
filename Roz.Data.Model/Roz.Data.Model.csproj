@@ -64,22 +64,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\AllocationSeat.cs" />
-    <Compile Include="Entities\AllocationSection.cs" />
-    <Compile Include="Entities\AllocationType.cs" />
+    <Compile Include="DomainDbContext.cs" />
+    <Compile Include="Entities\AllocationTypeLookup.cs" />
+    <Compile Include="Entities\Seat.cs" />
+    <Compile Include="Entities\SeatStatusLookup.cs" />
+    <Compile Include="Entities\Section.cs" />
     <Compile Include="Entities\CustomerDetails.cs" />
     <Compile Include="Entities\Booking.cs" />
-    <Compile Include="Entities\DiscountType.cs" />
-    <Compile Include="Entities\SeatState.cs" />
+    <Compile Include="Entities\DiscountTypeLookup.cs" />
+    <Compile Include="Entities\Enums.cs" />
+    <Compile Include="Entities\EventCategoryLookup.cs" />
+    <Compile Include="Entities\FeeTypeLookup.cs" />
     <Compile Include="Entities\TicketBooking.cs" />
+    <Compile Include="Migrations\201504112105509_FirstDomainModel.cs" />
+    <Compile Include="Migrations\201504112105509_FirstDomainModel.Designer.cs">
+      <DependentUpon>201504112105509_FirstDomainModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Other\Discount.cs" />
     <Compile Include="Entities\Event.cs" />
-    <Compile Include="Entities\EventCategory.cs" />
     <Compile Include="Entities\EventAppointment.cs" />
     <Compile Include="Other\Fee.cs" />
-    <Compile Include="Entities\FeeType.cs" />
     <Compile Include="Other\FlatFee.cs" />
-    <Compile Include="Entities\GeneralAllocationSection.cs" />
+    <Compile Include="Other\GeneralSection.cs" />
     <Compile Include="Entities\GlobalConfiguration.cs" />
     <Compile Include="Entities\PriceCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,7 +114,11 @@
       <Name>Roz.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201504112105509_FirstDomainModel.resx">
+      <DependentUpon>201504112105509_FirstDomainModel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

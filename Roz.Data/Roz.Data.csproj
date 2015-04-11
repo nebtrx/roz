@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LookupEntity.cs" />
     <Compile Include="DataEngine.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Interfaces\IDataSessionImplementor.cs" />

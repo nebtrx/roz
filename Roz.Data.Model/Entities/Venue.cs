@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using Roz.Identity.EntityFramework;
 
 namespace Roz.Data.Model.Entities
 {
-    public class Venue
+    [Table("Venue", Schema = "Domain")]
+    public class Venue:EntityConcurrentlyUnsafe
     {
-        public Guid Guid { get; set; }
-
-        public long Id { get; set; }
-
         public string Name { get; set; }
 
         public string MainStreet { get; set; }
@@ -35,12 +34,22 @@ namespace Roz.Data.Model.Entities
 
         public string Phone { get; set; }
 
+        [ForeignKey("Owner")]
+        public long OwnerId { get; set; }
+
+        public User Owner { get; set; }
+
         public string GraphicRepresentation { get; set; }
 
-        public Event Event { get; set; }
+        /// <summary>
+        /// Many to Many
+        /// </summary>
+        public ICollection<Event> Events { get; set; }
 
-        public ICollection<AllocationSection> AvailableAllocationSections { get; set; }
+        [InverseProperty("Venue")]
+        public ICollection<Section> AvailableSections { get; set; }
 
+        [InverseProperty("Venue")]
         public ICollection<EventAppointment> AvailableAppointments { get; set; }
     }
 }

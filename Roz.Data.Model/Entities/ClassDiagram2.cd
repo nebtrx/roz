@@ -1,73 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Roz.Data.Model.Entities.AllocationSection">
+  <Class Name="Roz.Data.Model.Entities.Section">
     <Position X="10.75" Y="5.5" Width="1.5" />
+    <AssociationLine Name="AvailablePriceCategories" Type="Roz.Data.Model.Entities.PriceCategory" FixedFromPoint="true">
+      <Path>
+        <Point X="12.25" Y="6.153" />
+        <Point X="14.5" Y="6.153" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Seats" Type="Roz.Data.Model.Entities.Seat" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.562" Y="7.694" />
+        <Point X="11.562" Y="9.575" />
+        <Point X="12.25" Y="9.575" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.081" Y="1.345" Height="0.182" Width="1.178" />
+      </MemberNameLabel>
+    </AssociationLine>
     <AssociationLine Name="TicketBookings" Type="Roz.Data.Model.Entities.TicketBooking" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="10.75" Y="7.112" />
-        <Point X="10.133" Y="7.112" />
+        <Point X="10.75" Y="7.213" />
+        <Point X="10.133" Y="7.213" />
         <Point X="10.133" Y="8.278" />
-        <Point X="9.562" Y="8.278" />
-        <Point X="9.562" Y="9" />
+        <Point X="9.312" Y="8.278" />
+        <Point X="9.312" Y="9.5" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="-0.737" Y="0.376" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="AvailablePriceCategories" Type="Roz.Data.Model.Entities.PriceCategory" FixedFromPoint="true">
-      <Path>
-        <Point X="12.25" Y="6.114" />
-        <Point X="14.5" Y="6.114" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAQAAAAgAIAgBAAAAwAAAAAIAAAABAAAAgAAAAAAAAA=</HashCode>
-      <FileName>Entities\AllocationSection.cs</FileName>
+      <HashCode>AAQAAQAgAIAgBAAAAwAAAAAIAAgAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Entities\Section.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Discount" />
+      <Property Name="DiscountType" />
       <Property Name="Venue" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="TicketBookings" />
       <Property Name="AvailablePriceCategories" />
+      <Property Name="Seats" />
+      <Property Name="TicketBookings" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Roz.Data.Model.Entities.Booking">
-    <Position X="5" Y="5.5" Width="1.5" />
-    <AssociationLine Name="FeeType" Type="Roz.Data.Model.Entities.FeeType">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.264" Y="0.06" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="Venue" Type="Roz.Data.Model.Entities.Venue">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.2" Y="-3.121" />
-      </MemberNameLabel>
-    </AssociationLine>
+    <Position X="4.5" Y="6.25" Width="2" />
     <AssociationLine Name="Event" Type="Roz.Data.Model.Entities.Event" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="5.188" Y="5.5" />
-        <Point X="5.188" Y="4.382" />
-        <Point X="4.253" Y="4.382" />
-        <Point X="4.253" Y="4.007" />
+        <Point X="5.062" Y="6.25" />
+        <Point X="5.062" Y="5.875" />
+        <Point X="4.625" Y="5.875" />
+        <Point X="4.625" Y="4.714" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.713" Y="0.1" />
+        <Position X="-0.762" Y="0.844" />
       </MemberNameLabel>
     </AssociationLine>
     <AssociationLine Name="BookerDetails" Type="Roz.Data.Model.Entities.CustomerDetails" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="5" Y="7.188" />
-        <Point X="4.5" Y="7.188" />
-        <Point X="4.5" Y="10.25" />
+        <Point X="4.5" Y="8.218" />
+        <Point X="3.75" Y="8.218" />
+        <Point X="3.75" Y="10" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="-0.621" Y="1.869" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAIAAAACAAACAgAERAAAAAAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAgAIAAAAIAAQACAAACAggARAAAAAAgAAAQAAA=</HashCode>
       <FileName>Entities\Booking.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -76,41 +77,22 @@
       <Property Name="Event" />
       <Property Name="BookerDetails" />
     </ShowAsAssociation>
-  </Class>
-  <Class Name="Roz.Data.Model.Entities.Event">
-    <Position X="3.25" Y="1.75" Width="1.5" />
-    <AssociationLine Name="AvailableVenues" Type="Roz.Data.Model.Entities.Venue">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.251" Y="0.098" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="Bookings" Type="Roz.Data.Model.Entities.Booking">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.381" Y="-0.044" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAACACAAAAgCAAAEAAAAAQAACAABAAACAAAAAAACAA=</HashCode>
-      <FileName>Entities\Event.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Category" />
-      <Property Name="AllocationType" />
-    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="AvailableVenues" />
-      <Property Name="Bookings" />
+      <Property Name="TicketBookings" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Roz.Data.Model.Entities.EventAppointment">
-    <Position X="8" Y="5.5" Width="1.75" />
+    <Position X="7.5" Y="6.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAAAIABAAAAAAgAgBAABAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAIAAIAAAAAAIABAAAAAAAggAAABAAIAAAAAAAA=</HashCode>
       <FileName>Entities\EventAppointment.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Venue" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="Roz.Data.Model.Entities.GlobalConfiguration" Collapsed="true">
-    <Position X="14.75" Y="0.5" Width="1.5" />
+  <Class Name="Roz.Data.Model.Entities.GlobalConfiguration">
+    <Position X="16.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\GlobalConfiguration.cs</FileName>
@@ -118,180 +100,186 @@
   </Class>
   <Class Name="Roz.Data.Model.Entities.PriceCategory">
     <Position X="14.5" Y="5.5" Width="1.5" />
+    <AssociationLine Name="Section" Type="Roz.Data.Model.Entities.Section" FixedToPoint="true">
+      <Path>
+        <Point X="14.5" Y="6.75" />
+        <Point X="12.25" Y="6.75" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAAAAQAgAAAAABAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAgAAAAABAAAAAAAAAAAAIAAAAAAIAQAAA=</HashCode>
       <FileName>Entities\PriceCategory.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Section" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Roz.Data.Model.Entities.Venue">
-    <Position X="6.25" Y="0.75" Width="1.5" />
-    <AssociationLine Name="Event" Type="Roz.Data.Model.Entities.Event">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <AssociationLine Name="AvailableSections" Type="Roz.Data.Model.Entities.Section">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.059" Y="0.06" />
+        <Position X="1.531" Y="1.532" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="AvailableAllocationSections" Type="Roz.Data.Model.Entities.AllocationSection">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.907" Y="2.098" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="AvailableAppointments" Type="Roz.Data.Model.Entities.EventAppointment">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.007" Y="2.346" />
+    <AssociationLine Name="AvailableAppointments" Type="Roz.Data.Model.Entities.EventAppointment" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.531" Y="4.867" />
+        <Point X="8.531" Y="6" />
+        <Point X="8.068" Y="6" Type="JumpStart" />
+        <Point X="7.901" Y="6" Type="JumpEnd" />
+        <Point X="7.25" Y="6" />
+        <Point X="7.25" Y="7.767" />
+        <Point X="7.5" Y="7.767" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.844" Y="2.238" Height="0.182" Width="2.217" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>QAACAAAgAGAAAAAMIAAIAAQAggIABAAACAAAJACAAAA=</HashCode>
+      <HashCode>QAAAAACoAGAEAAAMIAAIAAQAggIAAAAAAAAAJACAAAA=</HashCode>
       <FileName>Entities\Venue.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Event" />
-    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="AvailableAllocationSections" />
+      <Property Name="Events" />
+      <Property Name="AvailableSections" />
       <Property Name="AvailableAppointments" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Roz.Data.Model.Entities.TicketBooking">
-    <Position X="7.75" Y="9" Width="2.25" />
-    <AssociationLine Name="AllocationSection" Type="Roz.Data.Model.Entities.AllocationSection" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="10" Y="9.375" />
-        <Point X="11" Y="9.375" />
-        <Point X="11" Y="7.565" />
-      </Path>
+    <Position X="7.5" Y="9.5" Width="2.25" />
+    <AssociationLine Name="Ticket" Type="Roz.Data.Model.Entities.Ticket">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.325" Y="0.469" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="PriceCategory" Type="Roz.Data.Model.Entities.PriceCategory" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="10" Y="9.812" />
-        <Point X="15.25" Y="9.812" />
-        <Point X="15.25" Y="7.373" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.898" Y="0.42" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="Booking" Type="Roz.Data.Model.Entities.Booking">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.275" Y="0.355" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="AttendeesDetails" Type="Roz.Data.Model.Entities.CustomerDetails">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.8" Y="0.213" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="BookedTickets" Type="Roz.Data.Model.Entities.Ticket">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.068" Y="0.418" />
+        <Position X="-0.73" Y="0.336" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAAAAIAAAAAAAAEQABAAAAAAAACgAAAAAA=</HashCode>
+      <HashCode>AEAAAAAAAAAIAACCAAAAQAAAQABAQAAAAIAAAAAAAAA=</HashCode>
       <FileName>Entities\TicketBooking.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="AllocationSection" />
-      <Property Name="PriceCategory" />
-      <Property Name="Appointment" />
-      <Property Name="Booking" />
+      <Property Name="AttendeeDetails" />
+      <Property Name="Seat" />
+      <Property Name="Ticket" />
     </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="AttendeesDetails" />
-      <Property Name="BookedTickets" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Roz.Data.Model.Entities.Ticket">
-    <Position X="8" Y="11.5" Width="1.5" />
-    <AssociationLine Name="TicketBooking" Type="Roz.Data.Model.Entities.TicketBooking">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.801" Y="0.342" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="AttendeeDetails" Type="Roz.Data.Model.Entities.CustomerDetails">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.586" Y="0.084" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="AllocationSeat" Type="Roz.Data.Model.Entities.AllocationSeat" FixedFromPoint="true" FixedToPoint="true">
+    <Position X="7.75" Y="12.5" Width="1.75" />
+    <AssociationLine Name="TicketBooking" Type="Roz.Data.Model.Entities.TicketBooking" FixedToPoint="true">
       <Path>
-        <Point X="9.5" Y="12.312" />
-        <Point X="13" Y="12.312" />
-        <Point X="13" Y="11.257" />
+        <Point X="8.062" Y="12.5" />
+        <Point X="8.062" Y="11.694" />
       </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.405" Y="0.228" />
+      </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>EEAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAIA=</HashCode>
       <FileName>Entities\Ticket.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TicketBooking" />
-      <Property Name="AttendeeDetails" />
-      <Property Name="AllocationSeat" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Roz.Data.Model.Entities.CustomerDetails">
-    <Position X="4.25" Y="10.25" Width="1.75" />
+    <Position X="3.5" Y="10" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAACAAAAAgAAAAAAQAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAACAgAAAgAQAAAAQAAAAAAAAAAAAAIAAAIAA=</HashCode>
       <FileName>Entities\CustomerDetails.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Bookings" />
+      <Property Name="TicketBookings" />
+    </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Roz.Data.Model.Entities.AllocationSeat">
-    <Position X="12.25" Y="9" Width="1.5" />
-    <AssociationLine Name="Section" Type="Roz.Data.Model.Entities.AllocationSection" FixedFromPoint="true" FixedToPoint="true">
+  <Class Name="Roz.Data.Model.Entities.Seat">
+    <Position X="12.25" Y="9" Width="2.25" />
+    <AssociationLine Name="Section" Type="Roz.Data.Model.Entities.Section" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="13.031" Y="9" />
-        <Point X="13.031" Y="6.741" />
-        <Point X="12.25" Y="6.741" />
+        <Point X="13.422" Y="9" />
+        <Point X="13.422" Y="7.25" />
+        <Point X="12.25" Y="7.25" />
       </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.278" Y="-0.323" />
+      </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAEAAAAAAAAAAAAQAAAAAAADgAAAAAABIAAAAE=</HashCode>
-      <FileName>Entities\AllocationSeat.cs</FileName>
+      <HashCode>AAQAAAAMAAAAAAAAAQAAAAAAAAIADgAAAAAAAIAQAAE=</HashCode>
+      <FileName>Entities\Seat.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Section" />
-      <Property Name="State" />
+      <Property Name="Status" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="TicketBookings" />
+    </ShowAsCollectionAssociation>
   </Class>
-  <Enum Name="Roz.Data.Model.Entities.AllocationType">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+  <Class Name="Roz.Identity.EntityFramework.User" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Roz.Data.Model.Entities.EventCategoryLookup" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>Entities\AllocationType.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\EventCategoryLookup.cs</FileName>
     </TypeIdentifier>
-  </Enum>
-  <Enum Name="Roz.Data.Model.Entities.EventCategory">
-    <Position X="0.5" Y="2" Width="1.5" />
+  </Class>
+  <Class Name="Roz.Data.Model.Entities.Event">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <AssociationLine Name="Category" Type="Roz.Data.Model.Entities.EventCategoryLookup">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.022" Y="-0.575" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="AllocationType" Type="Roz.Data.Model.Entities.AllocationTypeLookup">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.101" Y="-0.358" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>hAAgAAEAAAEAABAACAAAAAAAAAAAAAAAAACACAQEBAA=</HashCode>
-      <FileName>Entities\EventCategory.cs</FileName>
+      <HashCode>AAAACACIAAAgCgAAEAAAAAQAACAEBAAACAAAAAAACAA=</HashCode>
+      <FileName>Entities\Event.cs</FileName>
     </TypeIdentifier>
-  </Enum>
-  <Enum Name="Roz.Data.Model.Entities.DiscountType">
-    <Position X="12.75" Y="3.5" Width="1.5" />
+    <ShowAsAssociation>
+      <Property Name="Category" />
+      <Property Name="Owner" />
+      <Property Name="AllocationType" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AvailableVenues" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Roz.Data.Model.Entities.FeeTypeLookup" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAEAAAA=</HashCode>
-      <FileName>Entities\DiscountType.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\FeeTypeLookup.cs</FileName>
+      <NewMemberFileName>Entities\FeeTypeLookUp.cs</NewMemberFileName>
     </TypeIdentifier>
-  </Enum>
-  <Enum Name="Roz.Data.Model.Entities.FeeType">
-    <Position X="0.5" Y="5.5" Width="1.5" />
+  </Class>
+  <Class Name="Roz.Data.Model.Entities.DiscountTypeLookup" Collapsed="true">
+    <Position X="13.25" Y="3" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\FeeType.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\DiscountTypeLookup.cs</FileName>
     </TypeIdentifier>
-  </Enum>
-  <Enum Name="Roz.Data.Model.Entities.SeatState">
-    <Position X="14.75" Y="10.25" Width="1.5" />
+  </Class>
+  <Class Name="Roz.Data.Model.Entities.SeatStatusLookup" Collapsed="true">
+    <Position X="16.5" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAgAABAAAA=</HashCode>
-      <FileName>Entities\SeatState.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\SeatStatusLookup.cs</FileName>
     </TypeIdentifier>
-  </Enum>
+  </Class>
+  <Class Name="Roz.Data.Model.Entities.AllocationTypeLookup" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\AllocationTypeLookup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

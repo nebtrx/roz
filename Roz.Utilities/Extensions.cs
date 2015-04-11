@@ -194,6 +194,32 @@ namespace Roz.Utilities
                 throw new ArgumentNullException(param);
         }
 
+        public static IEnumerable<T> WhereNotNull<T>(this IEnumerable<T> sequence)
+        {
+            return sequence.Where(e => e != null);
+        }
+
+        public static T NotNull<T>(this T obj) where T : new()
+        {
+            return obj == null? new T(): obj;
+        }
+
+        public static ICollection<T> NotNull<T>(this ICollection<T> obj)
+        {
+            return obj ?? new List<T>();
+        }
+
+        public static IEnumerable<T> NotNull<T>(this IEnumerable<T> obj)
+        {
+            return obj ?? new List<T>();
+        }
+
+        public static IEnumerable<T> WhereNotNull<T>(this IEnumerable<T?> sequence)
+            where T : struct
+        {
+            return sequence.Where(e => e != null).Select(e => e.Value);
+        }
+
 
         public static void ForEach<T>(this IEnumerable<T> source, Action<T> action)
         {

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using Roz.Identity.EntityFramework;
 
 namespace Roz.Data.Model.Entities
 {
-    public class Event
+    [Table("Event", Schema = "Domain")]
+    public class Event: EntityConcurrentlyUnsafe
     {
         public Guid Guid { get; set; }
 
@@ -16,26 +18,32 @@ namespace Roz.Data.Model.Entities
 
         public bool IsActive { get; set; }
 
+        public bool IsAttendeeDetailsRequired { get; set; }
+
         /// <summary>
         /// IVA percent
         /// </summary>
         public decimal VATRate { get; set; }
 
 
-        /// <summary>
-        /// Descuento si registrado
-        /// </summary>
-        public EventCategory Category { get; set; }
+        [ForeignKey("Category")]
+        public int CategoryId { get; set; }
+        public EventCategoryLookup Category { get; set; }
 
+        public AllocationTypeLookup AllocationType { get; set; }
+
+
+        /// <summary>
+        /// Many to Many
+        /// </summary>
         public ICollection<Venue> AvailableVenues { get; set; }
 
-        /// <summary>
-        /// Indicates if the event has a general allocation plan or a seating plan
-        /// </summary>
-        public AllocationType AllocationType { get; set; }
-
+        [InverseProperty("Event")]
         public ICollection<Booking> Bookings { get; set; }
 
+        [ForeignKey("Owner")]
+        public long OwnerId { get; set; }
+        
         public User Owner { get; set; }
     }
 }

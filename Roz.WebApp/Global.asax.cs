@@ -13,6 +13,7 @@ namespace Roz.WebApp
     {
         protected void Application_Start()
         {
+            DataConfig.RegisterDataEngine();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

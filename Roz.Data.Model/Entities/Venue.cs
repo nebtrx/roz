@@ -35,7 +35,7 @@ namespace Roz.Data.Model.Entities
         public string Phone { get; set; }
 
         [ForeignKey("Owner")]
-        public long OwnerId { get; set; }
+        public int OwnerId { get; set; }
 
         public User Owner { get; set; }
 
@@ -51,5 +51,11 @@ namespace Roz.Data.Model.Entities
 
         [InverseProperty("Venue")]
         public ICollection<EventAppointment> AvailableAppointments { get; set; }
+
+        [InverseProperty("Venue")]
+        public ICollection<TicketBooking> TicketBookings { get; set; }
+
+        [InverseProperty("Venue")]
+        public ICollection<Booking> Bookings { get; set; }
     }
 }

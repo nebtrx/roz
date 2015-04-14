@@ -326,6 +326,10 @@
       <Project>{49699347-1B35-4839-A28D-980CD780EC93}</Project>
       <Name>Roz.Data.EntityFramework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Roz.Data.Model\Roz.Data.Model.csproj">
+      <Project>{8ADC49C7-9435-4515-BE45-A3A9BADD1438}</Project>
+      <Name>Roz.Data.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Roz.Data\Roz.Data.csproj">
       <Project>{0e0209b5-c323-4511-a233-c0af3cdbdb7f}</Project>
       <Name>Roz.Data</Name>

@@ -25,11 +25,14 @@ namespace Roz.Data.Model.Entities
         public long VenueId { get; set; }
         public Venue Venue { get; set; }
 
+
         [InverseProperty("Section")]
         public ICollection<PriceCategory> AvailablePriceCategories { get; set; }
 
+
         [InverseProperty("Section")]
         public ICollection<Seat> Seats { get; set; }
+
 
         [NotMapped]
         public IEnumerable<TicketBooking> TicketBookings

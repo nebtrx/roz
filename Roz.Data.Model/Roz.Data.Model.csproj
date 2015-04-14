@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="DomainDbContext.cs" />
     <Compile Include="Entities\AllocationTypeLookup.cs" />
+    <Compile Include="Entities\EventStatusLookup.cs" />
     <Compile Include="Entities\Seat.cs" />
     <Compile Include="Entities\SeatStatusLookup.cs" />
     <Compile Include="Entities\Section.cs" />
@@ -76,9 +77,9 @@
     <Compile Include="Entities\EventCategoryLookup.cs" />
     <Compile Include="Entities\FeeTypeLookup.cs" />
     <Compile Include="Entities\TicketBooking.cs" />
-    <Compile Include="Migrations\201504112105509_FirstDomainModel.cs" />
-    <Compile Include="Migrations\201504112105509_FirstDomainModel.Designer.cs">
-      <DependentUpon>201504112105509_FirstDomainModel.cs</DependentUpon>
+    <Compile Include="Migrations\201504142215566_InitialDomainModel.cs" />
+    <Compile Include="Migrations\201504142215566_InitialDomainModel.Designer.cs">
+      <DependentUpon>201504142215566_InitialDomainModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Other\Discount.cs" />
@@ -115,8 +116,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201504112105509_FirstDomainModel.resx">
-      <DependentUpon>201504112105509_FirstDomainModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201504142215566_InitialDomainModel.resx">
+      <DependentUpon>201504142215566_InitialDomainModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Roz.Data.Model.Entities
 {
-    [Table("EventCategory", Schema = "Domain")]
-    public class EventCategoryLookup:LookupEntity<EventCategory>
+    [Table("EventStatus", Schema = "Domain")]
+    public class EventStatusLookup:LookupEntity<EventStatus>
     {
-        public EventCategoryLookup() : base(i => ((EventCategory)i))
+        public EventStatusLookup() : base(i => ((EventStatus)i))
         {
         }
 
-        [InverseProperty("Category")]
+        [InverseProperty("EventStatus")]
         public ICollection<Event> Events { get; set; }
     }
 }

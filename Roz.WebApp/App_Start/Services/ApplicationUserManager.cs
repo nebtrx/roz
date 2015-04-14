@@ -10,9 +10,9 @@ using IdentityDbContext = Roz.Identity.EntityFramework.IdentityDbContext;
 
 namespace Roz.WebApp.Services
 {
-    public class ApplicationUserManager : UserManager<User, long>
+    public class ApplicationUserManager : UserManager<User, int>
     {
-        public ApplicationUserManager(IUserStore<User, long> store)
+        public ApplicationUserManager(IUserStore<User, int> store)
             : base(store)
         {
         }
@@ -23,7 +23,7 @@ namespace Roz.WebApp.Services
             var manager = new ApplicationUserManager(
                 new UserStore(context.Get<IdentityDbContext>()));
             // Configure validation logic for usernames 
-            manager.UserValidator = new UserValidator<User, long>(manager)
+            manager.UserValidator = new UserValidator<User, int>(manager)
             {
                 AllowOnlyAlphanumericUserNames = false,
                 RequireUniqueEmail = true
@@ -41,12 +41,12 @@ namespace Roz.WebApp.Services
             // and Emails as a step of receiving a code for verifying the user 
             // You can write your own provider and plug in here. 
             manager.RegisterTwoFactorProvider("PhoneCode",
-                new PhoneNumberTokenProvider<User, long>
+                new PhoneNumberTokenProvider<User, int>
                 {
                     MessageFormat = "Your security code is: {0}"
                 });
             manager.RegisterTwoFactorProvider("EmailCode",
-                new EmailTokenProvider<User, long>
+                new EmailTokenProvider<User, int>
                 {
                     Subject = "Security Code",
                     BodyFormat = "Your security code is: {0}"
@@ -57,7 +57,7 @@ namespace Roz.WebApp.Services
             if (dataProtectionProvider != null)
             {
                 manager.UserTokenProvider =
-                    new DataProtectorTokenProvider<User, long>(
+                    new DataProtectorTokenProvider<User, int>(
                         dataProtectionProvider.Create("ASP.NET Identity"));
             }
             return manager;

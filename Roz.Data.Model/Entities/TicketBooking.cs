@@ -12,9 +12,16 @@ namespace Roz.Data.Model.Entities
         public long SeatId { get; set; }
         public Seat Seat { get; set; }
 
+
         [ForeignKey("Appointment")]
         public long AppointmentId { get; set; }
         public EventAppointment Appointment { get; set; }
+
+
+        [ForeignKey("Venue")]
+        public long VenueId { get; set; }
+        public Venue Venue { get; set; }
+
 
         [ForeignKey("Booking")]
         public long BookingId { get; set; }

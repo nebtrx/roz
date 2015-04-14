@@ -5,7 +5,7 @@ namespace Roz.Data.Model.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Roz.Data.Model.DomainDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<Roz.Data.Model.DomainDbContext>
     {
         public Configuration()
         {

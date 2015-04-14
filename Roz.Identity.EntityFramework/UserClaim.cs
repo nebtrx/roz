@@ -2,5 +2,5 @@
 
 namespace Roz.Identity.EntityFramework
 {
-    public class UserClaim : IdentityUserClaim<long> { }
+    public class UserClaim : IdentityUserClaim<int> { }
 }

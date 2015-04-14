@@ -2,5 +2,5 @@
 
 namespace Roz.Identity.EntityFramework
 {
-    public class UserRole : IdentityUserRole<long> { }
+    public class UserRole : IdentityUserRole<int> { }
 }

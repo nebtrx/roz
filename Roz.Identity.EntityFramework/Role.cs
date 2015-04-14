@@ -2,7 +2,7 @@
 
 namespace Roz.Identity.EntityFramework
 {
-    public class Role : IdentityRole<long, UserRole>
+    public class Role : IdentityRole<int, UserRole>
     {
         public Role() { }
         public Role(string name) { Name = name; }

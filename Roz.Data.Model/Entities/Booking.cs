@@ -26,12 +26,10 @@ namespace Roz.Data.Model.Entities
         public long BookerDetailsId { get; set; }
         public CustomerDetails BookerDetails { get; set; }
 
-
         public bool IsConfirmed { get; set; }
 
         public DateTime ReservationTime { get; set; }
 
-        
 
         [InverseProperty("Booking")]
         public ICollection<TicketBooking> TicketBookings { get; set; }

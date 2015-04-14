@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Roz.Data.Model.Entities
@@ -10,7 +11,6 @@ namespace Roz.Data.Model.Entities
 
         [ForeignKey("Venue")]
         public long VenueId { get; set; }
-
         public Venue Venue { get; set; }
 
         public DateTime Date { get; set; }
@@ -24,5 +24,8 @@ namespace Roz.Data.Model.Entities
         public DateTime SaleStartTime { get; set; }
 
         public DateTime SaleEndTime { get; set; }
+
+        [InverseProperty("Appointment")]
+        public ICollection<TicketBooking> TicketBookings { get; set; }
     }
 }

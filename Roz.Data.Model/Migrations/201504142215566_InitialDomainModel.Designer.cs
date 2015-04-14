@@ -7,13 +7,13 @@ namespace Roz.Data.Model.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class FirstDomainModel : IMigrationMetadata
+    public sealed partial class InitialDomainModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FirstDomainModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialDomainModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "201504112105509_FirstDomainModel"; }
+            get { return "201504142215566_InitialDomainModel"; }
         }
         
         string IMigrationMetadata.Source

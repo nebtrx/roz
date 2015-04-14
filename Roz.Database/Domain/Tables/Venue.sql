@@ -16,8 +16,10 @@
     [OwnerId]               INT            NOT NULL,
     [GraphicRepresentation] NVARCHAR (MAX) NULL,
     CONSTRAINT [PK_Domain.Venue] PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_Domain.Venue_dbo.User_OwnerId] FOREIGN KEY ([OwnerId]) REFERENCES [dbo].[User] ([Id]) ON DELETE CASCADE
+    CONSTRAINT [FK_Domain.Venue_Security.User_OwnerId] FOREIGN KEY ([OwnerId]) REFERENCES [Security].[User] ([Id]) ON DELETE CASCADE
 );
+
+
 
 
 GO

@@ -3,7 +3,7 @@ namespace Roz.Data.Model.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialDomainModel : DbMigration
+    public partial class Initial_Domain_Model : DbMigration
     {
         public override void Up()
         {
@@ -35,7 +35,7 @@ namespace Roz.Data.Model.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("Domain.EventCategory", t => t.CategoryId)
                 .ForeignKey("Domain.EventStatus", t => t.EventStatus_Id)
-                .ForeignKey("dbo.User", t => t.OwnerId, cascadeDelete: true)
+                .ForeignKey("Security.User", t => t.OwnerId, cascadeDelete: true)
                 .ForeignKey("Domain.AllocationType", t => t.AllocationType_Id)
                 .Index(t => t.CategoryId)
                 .Index(t => t.OwnerId)
@@ -64,7 +64,7 @@ namespace Roz.Data.Model.Migrations
                         GraphicRepresentation = c.String(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.User", t => t.OwnerId, cascadeDelete: true)
+                .ForeignKey("Security.User", t => t.OwnerId, cascadeDelete: true)
                 .Index(t => t.OwnerId);
             
             CreateTable(
@@ -273,15 +273,15 @@ namespace Roz.Data.Model.Migrations
         {
             DropForeignKey("Domain.Ticket", "TicketBookingId", "Domain.TicketBooking");
             DropForeignKey("Domain.Event", "AllocationType_Id", "Domain.AllocationType");
-            DropForeignKey("Domain.Event", "OwnerId", "dbo.User");
+            DropForeignKey("Domain.Event", "OwnerId", "Security.User");
             DropForeignKey("Domain.Event", "EventStatus_Id", "Domain.EventStatus");
             DropForeignKey("Domain.Event", "CategoryId", "Domain.EventCategory");
             DropForeignKey("Domain.Booking", "EventId", "Domain.Event");
             DropForeignKey("Domain.EventVenue", "Venue_Id", "Domain.Venue");
             DropForeignKey("Domain.EventVenue", "Event_Id", "Domain.Event");
             DropForeignKey("Domain.TicketBooking", "VenueId", "Domain.Venue");
-            DropForeignKey("Domain.Venue", "OwnerId", "dbo.User");
-           DropForeignKey("Domain.Booking", "VenueId", "Domain.Venue");
+            DropForeignKey("Domain.Venue", "OwnerId", "Security.User");
+            DropForeignKey("Domain.Booking", "VenueId", "Domain.Venue");
             DropForeignKey("Domain.Section", "VenueId", "Domain.Venue");
             DropForeignKey("Domain.EventAppointment", "VenueId", "Domain.Venue");
             DropForeignKey("Domain.TicketBooking", "AppointmentId", "Domain.EventAppointment");

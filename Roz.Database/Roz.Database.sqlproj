@@ -67,6 +67,7 @@
     <Folder Include="Domain\" />
     <Folder Include="Domain\Tables\" />
     <Folder Include="Security\" />
+    <Folder Include="Security\Tables\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="I18N\Tables\Resource.sql" />
@@ -91,10 +92,11 @@
     <Build Include="Domain\Tables\CustomerDetails.sql" />
     <Build Include="Domain\Tables\Booking.sql" />
     <Build Include="Domain\Tables\AllocationType.sql" />
-    <Build Include="dbo\Tables\UserRole.sql" />
-    <Build Include="dbo\Tables\UserLogin.sql" />
-    <Build Include="dbo\Tables\UserClaim.sql" />
-    <Build Include="dbo\Tables\User.sql" />
-    <Build Include="dbo\Tables\Role.sql" />
+    <Build Include="Security\Tables\UserLogin.sql" />
+    <Build Include="Security\Tables\UserClaim.sql" />
+    <Build Include="Security\Tables\User.sql" />
+    <Build Include="Security\Tables\UserRole.sql" />
+    <Build Include="Security\Tables\Role.sql" />
+    <Build Include="Security\Security.sql" />
   </ItemGroup>
 </Project>

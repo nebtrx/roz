@@ -3,12 +3,12 @@ namespace Roz.Identity.EntityFramework.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class SecurityInitial : DbMigration
+    public partial class Initial_Security_Model : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Role",
+                "Security.Role",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -17,20 +17,20 @@ namespace Roz.Identity.EntityFramework.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.UserRole",
+                "Security.UserRole",
                 c => new
                     {
                         RoleId = c.Int(nullable: false),
                         UserId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => new { t.RoleId, t.UserId })
-                .ForeignKey("dbo.Role", t => t.RoleId, cascadeDelete: true)
-                .ForeignKey("dbo.User", t => t.UserId, cascadeDelete: true)
+                .ForeignKey("Security.Role", t => t.RoleId, cascadeDelete: true)
+                .ForeignKey("Security.User", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.RoleId)
                 .Index(t => t.UserId);
             
             CreateTable(
-                "dbo.User",
+                "Security.User",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -49,7 +49,7 @@ namespace Roz.Identity.EntityFramework.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.UserClaim",
+                "Security.UserClaim",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -58,11 +58,11 @@ namespace Roz.Identity.EntityFramework.Migrations
                         ClaimValue = c.String(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.User", t => t.UserId, cascadeDelete: true)
+                .ForeignKey("Security.User", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId);
             
             CreateTable(
-                "dbo.UserLogin",
+                "Security.UserLogin",
                 c => new
                     {
                         UserId = c.Int(nullable: false, identity: true),
@@ -71,26 +71,26 @@ namespace Roz.Identity.EntityFramework.Migrations
                         User_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.UserId)
-                .ForeignKey("dbo.User", t => t.User_Id)
+                .ForeignKey("Security.User", t => t.User_Id)
                 .Index(t => t.User_Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.UserRole", "UserId", "dbo.User");
-            DropForeignKey("dbo.UserLogin", "User_Id", "dbo.User");
-            DropForeignKey("dbo.UserClaim", "UserId", "dbo.User");
-            DropForeignKey("dbo.UserRole", "RoleId", "dbo.Role");
-            DropIndex("dbo.UserLogin", new[] { "User_Id" });
-            DropIndex("dbo.UserClaim", new[] { "UserId" });
-            DropIndex("dbo.UserRole", new[] { "UserId" });
-            DropIndex("dbo.UserRole", new[] { "RoleId" });
-            DropTable("dbo.UserLogin");
-            DropTable("dbo.UserClaim");
-            DropTable("dbo.User");
-            DropTable("dbo.UserRole");
-            DropTable("dbo.Role");
+            DropForeignKey("Security.UserRole", "UserId", "Security.User");
+            DropForeignKey("Security.UserLogin", "User_Id", "Security.User");
+            DropForeignKey("Security.UserClaim", "UserId", "Security.User");
+            DropForeignKey("Security.UserRole", "RoleId", "Security.Role");
+            DropIndex("Security.UserLogin", new[] { "User_Id" });
+            DropIndex("Security.UserClaim", new[] { "UserId" });
+            DropIndex("Security.UserRole", new[] { "UserId" });
+            DropIndex("Security.UserRole", new[] { "RoleId" });
+            DropTable("Security.UserLogin");
+            DropTable("Security.UserClaim");
+            DropTable("Security.User");
+            DropTable("Security.UserRole");
+            DropTable("Security.Role");
         }
     }
 }

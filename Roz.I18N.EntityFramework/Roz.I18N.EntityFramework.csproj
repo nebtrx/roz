@@ -50,9 +50,9 @@
     <Compile Include="I18NDbContext.cs" />
     <Compile Include="IEFLocalizedTextProvider.cs" />
     <Compile Include="EFLocalizedTextProvider.cs" />
-    <Compile Include="Migrations\201502192241425_InitialCreate.cs" />
-    <Compile Include="Migrations\201502192241425_InitialCreate.Designer.cs">
-      <DependentUpon>201502192241425_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201504142237059_Initial_I18_Model.cs" />
+    <Compile Include="Migrations\201504142237059_Initial_I18_Model.Designer.cs">
+      <DependentUpon>201504142237059_Initial_I18_Model.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,8 +82,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201502192241425_InitialCreate.resx">
-      <DependentUpon>201502192241425_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201504142237059_Initial_I18_Model.resx">
+      <DependentUpon>201504142237059_Initial_I18_Model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -18,11 +18,11 @@ namespace Roz.Identity.EntityFramework
             //base.OnModelCreating(modelBuilder);
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
-            modelBuilder.Entity<UserLogin>().HasKey<int>(l => l.UserId).ToTable("UserLogin");
-            modelBuilder.Entity<UserRole>().HasKey(r => new { r.RoleId, r.UserId }).ToTable("UserRole");
-            modelBuilder.Entity<User>().ToTable("User");
-            modelBuilder.Entity<Role>().ToTable("Role");
-            modelBuilder.Entity<UserClaim>().HasKey(c => c.Id).ToTable("UserClaim");
+            modelBuilder.Entity<UserLogin>().HasKey<int>(l => l.UserId).ToTable("UserLogin","Security");
+            modelBuilder.Entity<UserRole>().HasKey(r => new { r.RoleId, r.UserId }).ToTable("UserRole", "Security");
+            modelBuilder.Entity<User>().ToTable("User", "Security");
+            modelBuilder.Entity<Role>().ToTable("Role", "Security");
+            modelBuilder.Entity<UserClaim>().HasKey(c => c.Id).ToTable("UserClaim", "Security");
         }
 
         public static IdentityDbContext Create()

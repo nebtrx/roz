@@ -58,9 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityDbContext.cs" />
-    <Compile Include="Migrations\201504141439460_SecurityInitial.cs" />
-    <Compile Include="Migrations\201504141439460_SecurityInitial.Designer.cs">
-      <DependentUpon>201504141439460_SecurityInitial.cs</DependentUpon>
+    <Compile Include="Migrations\201504142238043_Initial_Security_Model.cs" />
+    <Compile Include="Migrations\201504142238043_Initial_Security_Model.Designer.cs">
+      <DependentUpon>201504142238043_Initial_Security_Model.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="User.cs" />
@@ -77,8 +77,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201504141439460_SecurityInitial.resx">
-      <DependentUpon>201504141439460_SecurityInitial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201504142238043_Initial_Security_Model.resx">
+      <DependentUpon>201504142238043_Initial_Security_Model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -26,8 +26,10 @@ namespace Roz.Data.Model
 
             // Change the name of the table to be Users instead of AspNetUsers
 
-            modelBuilder.Entity<UserLogin>().HasKey<int>(l => l.UserId);
-            modelBuilder.Entity<UserRole>().HasKey(r => new { r.RoleId, r.UserId });
+            modelBuilder.Entity<User>().HasKey<int>(l => l.Id).ToTable("User", "Security");
+            modelBuilder.Entity<UserLogin>().HasKey<int>(l => l.UserId).ToTable("UserLogin", "Security");
+            modelBuilder.Entity<UserRole>().HasKey(r => new { r.RoleId, r.UserId }).ToTable("UserRole", "Security");
+            modelBuilder.Entity<UserClaim>().HasKey<int>(l => l.Id).ToTable("UserClaim", "Security");
 
             modelBuilder.Entity<Event>()
                 .HasMany<Venue>(s => s.AvailableVenues)

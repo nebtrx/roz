@@ -11,11 +11,13 @@
     [EventStatus_Id]            INT              NOT NULL,
     [AllocationType_Id]         INT              NOT NULL,
     CONSTRAINT [PK_Domain.Event] PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_Domain.Event_dbo.User_OwnerId] FOREIGN KEY ([OwnerId]) REFERENCES [dbo].[User] ([Id]) ON DELETE CASCADE,
     CONSTRAINT [FK_Domain.Event_Domain.AllocationType_AllocationType_Id] FOREIGN KEY ([AllocationType_Id]) REFERENCES [Domain].[AllocationType] ([Id]),
     CONSTRAINT [FK_Domain.Event_Domain.EventCategory_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Domain].[EventCategory] ([Id]),
-    CONSTRAINT [FK_Domain.Event_Domain.EventStatus_EventStatus_Id] FOREIGN KEY ([EventStatus_Id]) REFERENCES [Domain].[EventStatus] ([Id])
+    CONSTRAINT [FK_Domain.Event_Domain.EventStatus_EventStatus_Id] FOREIGN KEY ([EventStatus_Id]) REFERENCES [Domain].[EventStatus] ([Id]),
+    CONSTRAINT [FK_Domain.Event_Security.User_OwnerId] FOREIGN KEY ([OwnerId]) REFERENCES [Security].[User] ([Id]) ON DELETE CASCADE
 );
+
+
 
 
 GO

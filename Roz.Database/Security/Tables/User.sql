@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[User] (
+﻿CREATE TABLE [Security].[User] (
     [Id]                   INT            IDENTITY (1, 1) NOT NULL,
     [Email]                NVARCHAR (MAX) NULL,
     [EmailConfirmed]       BIT            NOT NULL,
@@ -11,6 +11,6 @@
     [LockoutEnabled]       BIT            NOT NULL,
     [AccessFailedCount]    INT            NOT NULL,
     [UserName]             NVARCHAR (MAX) NULL,
-    CONSTRAINT [PK_dbo.User] PRIMARY KEY CLUSTERED ([Id] ASC)
+    CONSTRAINT [PK_Security.User] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

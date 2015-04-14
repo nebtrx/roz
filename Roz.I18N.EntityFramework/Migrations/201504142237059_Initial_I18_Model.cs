@@ -3,7 +3,7 @@ namespace Roz.I18N.EntityFramework.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class Initial_I18_Model : DbMigration
     {
         public override void Up()
         {

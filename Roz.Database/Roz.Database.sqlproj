@@ -71,15 +71,30 @@
   <ItemGroup>
     <Build Include="I18N\Tables\Resource.sql" />
     <Build Include="I18N\Tables\ResourceValue.sql" />
-    <Build Include="dbo\Tables\AspNetRoles.sql" />
-    <Build Include="dbo\Tables\AspNetUserRoles.sql" />
-    <Build Include="dbo\Tables\AspNetUsers.sql" />
-    <Build Include="dbo\Tables\AspNetUserClaims.sql" />
-    <Build Include="dbo\Tables\AspNetUserLogins.sql" />
     <Build Include="dbo\Tables\__MigrationHistory.sql" />
-    <Build Include="Domain\Tables\Books.sql" />
-    <Build Include="Domain\Tables\Reviews.sql" />
     <Build Include="Security\Domain.sql" />
     <Build Include="Security\I18N.sql" />
+    <Build Include="Domain\Tables\Venue.sql" />
+    <Build Include="Domain\Tables\TicketBooking.sql" />
+    <Build Include="Domain\Tables\Ticket.sql" />
+    <Build Include="Domain\Tables\Section.sql" />
+    <Build Include="Domain\Tables\SeatStatus.sql" />
+    <Build Include="Domain\Tables\Seat.sql" />
+    <Build Include="Domain\Tables\PriceCategory.sql" />
+    <Build Include="Domain\Tables\FeeType.sql" />
+    <Build Include="Domain\Tables\EventVenue.sql" />
+    <Build Include="Domain\Tables\EventStatus.sql" />
+    <Build Include="Domain\Tables\EventCategory.sql" />
+    <Build Include="Domain\Tables\EventAppointment.sql" />
+    <Build Include="Domain\Tables\Event.sql" />
+    <Build Include="Domain\Tables\DiscountType.sql" />
+    <Build Include="Domain\Tables\CustomerDetails.sql" />
+    <Build Include="Domain\Tables\Booking.sql" />
+    <Build Include="Domain\Tables\AllocationType.sql" />
+    <Build Include="dbo\Tables\UserRole.sql" />
+    <Build Include="dbo\Tables\UserLogin.sql" />
+    <Build Include="dbo\Tables\UserClaim.sql" />
+    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Tables\Role.sql" />
   </ItemGroup>
 </Project>

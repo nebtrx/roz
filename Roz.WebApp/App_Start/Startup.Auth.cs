@@ -34,7 +34,7 @@ namespace Roz.WebApp
                 Provider = new CookieAuthenticationProvider
                 {
                     OnValidateIdentity = SecurityStampValidator
-                        .OnValidateIdentity<ApplicationUserManager, User, long>(
+                        .OnValidateIdentity<ApplicationUserManager, User, int>(
                             validateInterval: TimeSpan.FromMinutes(30),
                             regenerateIdentityCallback: (manager, user) =>
                                 user.GenerateUserIdentityAsync(manager),

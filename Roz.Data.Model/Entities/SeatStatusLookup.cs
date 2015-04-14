@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Roz.Data.Model.Entities
 {
@@ -8,5 +9,8 @@ namespace Roz.Data.Model.Entities
         public SeatStatusLookup() : base(i => ((SeatStatus)i))
         {
         }
+
+        [InverseProperty("Status")]
+        public ICollection<Seat> Seats { get; set; }
     }
 }

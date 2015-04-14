@@ -16,7 +16,7 @@ namespace Roz.Data.Model.Entities
 
         public bool IsPublic { get; set; }
 
-        public bool IsActive { get; set; }
+        public EventStatusLookup EventStatus { get; set; }
 
         public bool IsAttendeeDetailsRequired { get; set; }
 
@@ -42,7 +42,7 @@ namespace Roz.Data.Model.Entities
         public ICollection<Booking> Bookings { get; set; }
 
         [ForeignKey("Owner")]
-        public long OwnerId { get; set; }
+        public int OwnerId { get; set; }
         
         public User Owner { get; set; }
     }

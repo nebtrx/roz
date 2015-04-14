@@ -12,6 +12,13 @@ namespace Roz.Data.Model.Entities
         ItemsPrice
     }
 
+    public enum EventStatus
+    {
+        Inactive,
+        Active,
+        Archived
+    }
+
     public enum AllocationType
     {
         GeneralAllocation,

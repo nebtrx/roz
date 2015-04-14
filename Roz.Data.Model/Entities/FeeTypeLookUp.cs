@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Roz.Data.Model.Entities
 {
@@ -8,5 +9,8 @@ namespace Roz.Data.Model.Entities
         public FeeTypeLookup() : base(i => ((FeeType)i))
         {
         }
+
+        [InverseProperty("FeeType")]
+        public ICollection<Booking> Bookings { get; set; }
     }
 }

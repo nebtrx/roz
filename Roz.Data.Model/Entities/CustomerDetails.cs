@@ -18,7 +18,6 @@ namespace Roz.Data.Model.Entities
 
         public string Organization { get; set; }
 
-
         [InverseProperty("BookerDetails")]
         public ICollection<Booking> Bookings { get; set; }
 

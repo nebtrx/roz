@@ -66,6 +66,15 @@
   <ItemGroup>
     <Compile Include="DomainDbContext.cs" />
     <Compile Include="Entities\AllocationTypeLookup.cs" />
+    <Content Include="Entities\Enums.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Enums.cs</LastGenOutput>
+    </Content>
+    <Compile Include="Entities\Enums.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enums.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\EventStatusLookup.cs" />
     <Compile Include="Entities\Seat.cs" />
     <Compile Include="Entities\SeatStatusLookup.cs" />
@@ -73,7 +82,6 @@
     <Compile Include="Entities\CustomerDetails.cs" />
     <Compile Include="Entities\Booking.cs" />
     <Compile Include="Entities\DiscountTypeLookup.cs" />
-    <Compile Include="Entities\Enums.cs" />
     <Compile Include="Entities\EventCategoryLookup.cs" />
     <Compile Include="Entities\FeeTypeLookup.cs" />
     <Compile Include="Entities\TicketBooking.cs" />
@@ -119,6 +127,9 @@
     <EmbeddedResource Include="Migrations\201504142238467_Initial_Domain_Model.resx">
       <DependentUpon>201504142238467_Initial_Domain_Model.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

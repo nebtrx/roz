@@ -1,0 +1,72 @@
+﻿<#@ template debug="true" hostSpecific="true" #>
+    <#@ output extension=".cs" #>
+    <#@ Assembly Name="System.Data" #>
+    <#@ import namespace="System.Data" #>
+    <#@ import namespace="System.Data.SqlClient" #>
+    <#@ import namespace="System.IO" #>
+    <#@ import namespace="System.Text.RegularExpressions" #>
+    <#
+    string[] tables = new[] {"Domain.DiscountType", 
+                            "Domain.EventStatus", 
+                            "Domain.AllocationType", 
+                            "Domain.FeeType", 
+                            "Domain.EventCategory", 
+                            "Domain.SeatStatus"};
+    
+    string columnName = "Name";
+	string connectionString = @"Data Source=(LocalDb)\v11.0;Initial Catalog=ROZ;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
+
+    // Get containing project
+    string namespaceName = "Roz.Data.Model.Entities";
+#>
+
+namespace <#= namespaceName #>
+{
+	<#  
+	foreach(var table in tables){
+    string tableName = table.Substring(table.IndexOf('.')+1);
+	#>
+        
+	#region <#= tableName #>  
+
+	/// <summary>
+	/// <#= tableName #> auto generated enumeration
+	/// </summary>
+	public enum <#= tableName #>
+	{
+	<#
+	string columnId = "Id";
+	SqlConnection conn = new SqlConnection(connectionString);
+	string command = string.Format("select {0}, {1} from {2} order by {0}", columnId, columnName, table);
+	SqlCommand comm = new SqlCommand(command, conn);
+
+	conn.Open();
+
+	SqlDataReader reader = comm.ExecuteReader();
+	bool loop = reader.Read();
+
+	while(loop)
+	{
+	#>  
+        /// <summary>
+		/// <#= reader[columnName] #> configuration setting.
+		/// </summary>
+		<#= Pascalize(reader[columnName]) #> = <#= reader[columnId] #><# loop = reader.Read(); #><#= loop ? ",\r\n" : string.Empty #>
+	<#
+	}
+	#>	
+	}
+
+	#endregion
+<#}
+#>
+}
+
+<#+
+    private string Pascalize(object value)
+	{
+		Regex rx = new Regex(@"(?:[^a-zA-Z0-9]*)(?<first>[a-zA-Z0-9])(?<reminder>[a-zA-Z0-9]*)(?:[^a-zA-Z0-9]*)");
+		return rx.Replace(value.ToString(), m => m.Groups["first"].ToString().ToUpper() + m.Groups["reminder"].ToString().ToLower());
+    }
+	  
+#>

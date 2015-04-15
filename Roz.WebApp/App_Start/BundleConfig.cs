@@ -25,7 +25,15 @@ namespace Roz.WebApp
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/material.css",
+                      "~/Content/material-fullpalette.css",
+                      "~/Content/ripples.css",
+                      "~/Content/roboto.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/materialdesign").Include(
+                      "~/Scripts/material.js",
+                      "~/Scripts/ripples.js"));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862

@@ -397,6 +397,10 @@
       <Project>{0261A8EC-FB90-41F1-A262-BC1ABDB6D437}</Project>
       <Name>Roz.Infrastructure.Web</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Roz.Logging.Elmah.Async\Roz.Logging.Elmah.Async.csproj">
+      <Project>{5c4b17ac-978c-4ee9-b68a-9e20779b9083}</Project>
+      <Name>Roz.Logging.Elmah.Async</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Roz.Utilities\Roz.Utilities.csproj">
       <Project>{A5B6128B-8B00-4684-8CE7-9174EED0305F}</Project>
       <Name>Roz.Utilities</Name>

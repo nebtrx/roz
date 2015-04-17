@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Globalization;
-using System.Text.RegularExpressions;
-using System.Threading;
 using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
 using Roz.I18N.Utilities;
 
-namespace Roz.I18N.HttpModule
+namespace Roz.I18N
 {
     public class I18NHttpModule : IHttpModule
     {

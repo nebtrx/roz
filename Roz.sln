@@ -59,6 +59,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{FA1D6E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roz.Data.Model", "Roz.Data.Model\Roz.Data.Model.csproj", "{8ADC49C7-9435-4515-BE45-A3A9BADD1438}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{67536308-3907-430C-A549-809204637CE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roz.Logging.Elmah.Async", "Roz.Logging.Elmah.Async\Roz.Logging.Elmah.Async.csproj", "{5C4B17AC-978C-4EE9-B68A-9E20779B9083}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +143,10 @@ Global
 		{8ADC49C7-9435-4515-BE45-A3A9BADD1438}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ADC49C7-9435-4515-BE45-A3A9BADD1438}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ADC49C7-9435-4515-BE45-A3A9BADD1438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C4B17AC-978C-4EE9-B68A-9E20779B9083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C4B17AC-978C-4EE9-B68A-9E20779B9083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C4B17AC-978C-4EE9-B68A-9E20779B9083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C4B17AC-978C-4EE9-B68A-9E20779B9083}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -163,5 +171,6 @@ Global
 		{E563C598-B321-40CF-9DEE-76F0A8BAA22E} = {0897F94B-97F7-49D4-AF93-AE2E814AE028}
 		{56851237-D076-4797-8C0A-4EA9270CBD82} = {CE5B6106-1FB8-473A-9801-9616C6434750}
 		{8ADC49C7-9435-4515-BE45-A3A9BADD1438} = {FA1D6E73-4BB5-4FF5-9637-7D892C451648}
+		{5C4B17AC-978C-4EE9-B68A-9E20779B9083} = {67536308-3907-430C-A549-809204637CE4}
 	EndGlobalSection
 EndGlobal
